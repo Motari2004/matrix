@@ -128,3 +128,19 @@ body {
   }
   
   
+
+  /* Remove fixed margin-left and large margin-top from buttons */
+button {
+  margin: 0;
+}
+
+/* Use media queries only if needed */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
