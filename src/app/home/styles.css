@@ -15,8 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the container takes full height of the viewport */
-  overflow: auto;
-  width: fit-content;
 }
 
 .content-container {
@@ -358,5 +356,7 @@ body {
 .profile-link:hover {
   text-decoration: underline;
 }
+
+
 
 
