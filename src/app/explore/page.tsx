@@ -28,9 +28,9 @@ const Explore: React.FC = () => {
         <h1 className="section-title">Inside the Simulation</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
         <div className="journal-post">
-          <h3>🧬 April 17, 2025</h3>
+          <h3>🧬 April 18, 2025</h3>
           <p>
-            Revelation #12: Nothing is permanent.
+            Nothing is permanent.
             <br />
             The system trains you to fear change. But in the code, only flow survives. Permanence is a trap. Evolve or loop.
           </p>
