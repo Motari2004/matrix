@@ -138,6 +138,7 @@ button {
 @media (max-width: 640px) {
   h1 {
     font-size: 2rem;
+    margin-top: 2px;
   }
 
   p {
