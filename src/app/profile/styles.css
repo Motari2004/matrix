@@ -1,149 +1,128 @@
-/* Main container styles for centering and portrait layout */
-.user-profile-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #3e852d, #0e56ad); /* Gradient background */
-  padding: 20px;
-  position: relative; /* For absolute positioning of the matrix effect */
+/* General Mobile Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Add matrix effect background */
+/* Mobile-friendly user profile page */
+.user-profile-page {
+  position: relative;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+/* Matrix Effect */
 .matrix-effect {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Slight dark overlay */
-  overflow: hidden;
-  pointer-events: none; /* Prevent it from interfering with other elements */
+  z-index: 0;
+  pointer-events: none;
 }
-
 .matrix-effect span {
   position: absolute;
-  top: -100px; /* Start from above the viewport */
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
-  color: rgba(0, 255, 0, 0.7);
-  animation: matrixRain 5s linear infinite;
-  opacity: 0;
+  animation: fall linear infinite;
+  color: #0f0;
+  font-size: 14px;
 }
-
-@keyframes matrixRain {
+@keyframes fall {
   0% {
-    top: -100px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    transform: translateY(-100%);
   }
   100% {
-    top: 100%;
-    opacity: 0;
+    transform: translateY(100vh);
   }
 }
 
-/* Profile container styles */
+/* Profile Container */
 .profile-container {
-  width: 100%;
-  max-width: 500px; /* Limit the width for portrait view */
-  padding: 20px;
-  background-color: rgb(121, 93, 62); /* Background color for profile container */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative; /* To allow absolute positioning of the matrix effect */
-  z-index: 1; /* Ensure it stays above the background */
-}
-
-/* Profile header section (Avatar and Username) */
-.profile-header {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 12px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
+/* Avatar Styling */
 .profile-image {
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-/* Profile info section */
-.profile-info {
-  margin-bottom: 30px;
-}
-
-.profile-detail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 30px;
-}
-
+/* Referral link */
 .referral-link {
-  font-size: 20px;
-  color: #ffffff;
-  text-decoration: none;
+  word-wrap: break-word;
+  color: #0ff;
+  font-size: 0.9rem;
 }
 
-.referral-link:hover {
-  text-decoration: underline;
-}
-
+/* Copy button */
 .copy-btn {
-  background-color: #0073e6;
-  color: white;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0f0;
+  color: #000;
   border: none;
-  padding: 8px 15px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
-
-.copy-btn:hover {
-  background-color: #005bb5;
-}
-
 .copy-success-message {
-  color: green;
-  font-size: 14px;
-  margin-top: 10px;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #0f0;
 }
 
-/* Logout button */
+/* Action buttons */
 .actions {
-  text-align: center;
+  margin-top: 2rem;
 }
-
 .action-btn {
-  background-color: #ff4d4d;
-  color: white;
+  padding: 0.6rem 1.2rem;
+  background-color: #f00;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
 }
 
-.action-btn:hover {
-  background-color: #e60000;
+/* Loading state */
+.loading {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #0f0;
 }
 
-
-
-.matrix-effect span {
-  position: absolute;
-  top: -100px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 24px;
-  color: rgba(0, 255, 0, 0.7);
-  animation: matrixRain 5s linear infinite;
-  opacity: 0;
-  white-space: pre;
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1rem;
+  }
+  .profile-image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  .referral-link {
+    font-size: 0.85rem;
+  }
+  .copy-btn, .action-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
