@@ -360,28 +360,3 @@ body {
 
 
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 1.8rem; /* Scales down the title */
-  }
-
-  .subtitle {
-    font-size: 1.2rem; /* Scales down the subtitle */
-    padding: 0 0.5rem;
-  }
-
-  .section-heading {
-    font-size: 1.5rem; /* Adjusts heading size */
-  }
-
-  .content-container {
-    padding: 0 1rem; /* Reduces padding */
-  }
-
-  .matrix-updates .update-card,
-  .africa-cards .africa-card,
-  .quotes-grid .quote-card {
-    width: 100%; /* Ensures elements fit within the screen */
-    margin: auto; /* Centers the cards */
-  }
-}
