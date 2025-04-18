@@ -317,47 +317,7 @@ body {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
 
-  body {
-    font-size: 14px; /* Adjust base font size for smaller screens */
-  }
-
-  .home-container {
-    flex-direction: column;
-    padding: 0 10px; /* Padding for better spacing */
-  }
-
-  .matrix-updates .update-cards {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
-
-  .footer {
-    padding: 1.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-/* Adjust page height and scroll for mobile */
-@media (max-width: 480px) {
-  .content-container {
-    padding: 20px;
-    text-align: left;
-  }
-
-  .profile-tab {
-    top: 5px; /* Reduce space for smaller screens */
-    right: 10px; /* Ensure it's within the screen */
-  }
-}
-
-
+  
   .title {
     font-size: 1.5rem;
   }
@@ -391,3 +351,22 @@ body {
     right: 15px;
     padding: 8px 15px;
   }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav a {
+    font-size: 1.2rem;
+  }
+}
