@@ -1,18 +1,19 @@
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #1a1a1d, #3a3a52); /* Deep matrix-style gradient */
-  color: #ffffff;
-
-  overflow: auto;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   box-sizing: border-box;
-
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a1a1d, #3a3a52);
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.home-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure the container takes full height of the viewport */
+body {
+  overflow-y: auto;
 }
+
 
 .content-container {
   text-align: center;
