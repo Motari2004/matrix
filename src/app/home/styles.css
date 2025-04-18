@@ -339,7 +339,7 @@ body {
 .profile-tab {
   position: fixed;
   top: 10px; /* Adjust to your desired distance from the top */
-  right: 100px; /* Position it on the right side */
+  right: 50px; /* Position it on the right side */
   background-color: #333; /* Background color for the tab */
   padding: 10px 20px;
   border-radius: 5px;
