@@ -316,7 +316,9 @@ body {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-
+body{
+  overflow:auto;
+}
   
   .title {
     font-size: 1.5rem;
