@@ -1,143 +1,83 @@
 .explore-container {
-    background-image: url('/images/illusion1.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 2rem;
-    min-height: 100vh;
-    backdrop-filter: brightness(0.85) blur(2px);
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-  
-  .explore-section {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .rotating-quote {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #ffc107;
-    margin-bottom: 1rem;
-  }
-  
-  .journal-post, .project-card {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #00ffff;
-    border-radius: 12px;
-  }
-  
-  .glitches .journal-post {
-    border-left-color: #ff33cc;
-  }
-  
-  .projects .project-card {
-    border-left-color: #00ff88;
-  }
-  
-  .explore-footer {
-    text-align: center;
-    padding: 2rem 0 1rem;
-    font-size: 0.9rem;
-    color: #ccc;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
+  background-image: url('/images/illusion1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+  backdrop-filter: brightness(0.85) blur(2px);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
 
-  
-  .explore-section {
-    animation: fadeInUp 0.8s ease-out;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+.explore-section {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
 
-  .missions {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 3rem 1.5rem;
-    border-top: 1px solid #333;
-  }
-  
-  .mission-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    border-left: 3px solid #00ffc8;
-    border-radius: 8px;
-    transition: 0.3s ease;
-  }
-  
-  .mission-card:hover {
-    transform: translateX(4px);
-    background: rgba(255, 255, 255, 0.08);
-  }
-  
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
 
-  .illusion-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    animation: fadeInGrid 1.5s ease-in;
-  }
-  
-  .illusion-grid-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 16px rgba(0, 255, 200, 0.15);
-    transition: transform 0.3s ease;
-  }
-  
-  .illusion-grid-img:hover {
-    transform: scale(1.04);
-  }
-  
-  @keyframes fadeInGrid {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+.rotating-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
 
-  .illusion-grid {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-  }
-  
-  .illusion-grid-img {
-    border-radius: 8px; /* Optional: adds rounded corners */
-    object-fit: cover; /* Ensures images are responsive */
-  }
-  
+.journal-post, .mission-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ffff;
+  border-radius: 12px;
+}
+
+.mission-card:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
+}
+
+.illusion-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.illusion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.illusion-grid-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 255, 200, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.illusion-grid-img:hover {
+  transform: scale(1.04);
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
