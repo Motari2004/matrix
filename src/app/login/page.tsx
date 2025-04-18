@@ -1,13 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
-import { useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import './styles.css';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const router = useRouter();
+
+  // On page load, check if remembered user exists
+  useEffect(() => {
+    const remembered = localStorage.getItem('rememberedUser');
+    if (remembered) {
+      const parsed = JSON.parse(remembered);
+      setUsername(parsed.username);
+      setPassword(parsed.password);
+      setRememberMe(true);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,12 +42,18 @@ export default function LoginPage() {
 
       const data = await res.json();
 
-      // Check if the response has user data
       if (data && data.user) {
-        // Save session data in localStorage after successful login
+        // If "Remember Me" is checked, store the credentials
+        if (rememberMe) {
+          localStorage.setItem('rememberedUser', JSON.stringify({ username, password }));
+        } else {
+          localStorage.removeItem('rememberedUser');
+        }
+
+        // Store session info
         localStorage.setItem('userSession', JSON.stringify(data.user));
 
-        // Redirect to the home page
+        // Redirect to home page
         router.push('/home');
       } else {
         alert('Login failed: Invalid response format');
@@ -77,7 +96,18 @@ export default function LoginPage() {
             />
           </div>
 
-          <button type="submit" className="submit-button mt-4">
+          <div className="flex items-center mt-2 mb-4">
+            <input
+              type="checkbox"
+              id="rememberMe"
+              className="mr-2"
+              checked={rememberMe}
+              onChange={() => setRememberMe(!rememberMe)}
+            />
+            <label htmlFor="rememberMe" className="text-white">Remember Me</label>
+          </div>
+
+          <button type="submit" className="submit-button mt-2">
             Login
           </button>
         </form>
