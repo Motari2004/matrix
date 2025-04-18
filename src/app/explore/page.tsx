@@ -59,26 +59,32 @@ const Explore: React.FC = () => {
         </div>
       </div>
 
-      {/* Section 4: What To Do in the Matrix */}
-      <section className="explore-section missions">
-        <h2 className="section-title">What To Do in the Matrix</h2>
-        <div className="mission-card">
-          <h3>🔓 1. Wake Up</h3>
-          <p>Notice the script. See the loops. Realize most people are just reacting, not creating. You&rsquo;re not here to follow blindly.</p>
-        </div>
-        <div className="mission-card">
-          <h3>🛠 2. Hack the Code</h3>
-          <p>Learn systems — tech, business, beliefs. Then bend them. Use what they gave you to build what they fear: freedom.</p>
-        </div>
-        <div className="mission-card">
-          <h3>🚪 3. Escape the Loop</h3>
-          <p>Leave mentally, financially, spiritually. Grow. Build. Detach. Rewrite your purpose. Transcend the patterns.</p>
-        </div>
-        <div className="mission-card">
-          <h3>💡 4. Leave Clues for Others</h3>
-          <p>Don&rsquo;t just escape — document. Inspire. Build tools, write logs, share glitches. Help others break out too.</p>
-        </div>
-      </section>
+
+{/* Section 4: Break Free from the Matrix */}
+<section className="explore-section missions">
+  <h2 className="section-title">Break Free from the Matrix</h2>
+
+  <div className="mission-card">
+    <h3>🧠 1. Awaken</h3>
+    <p>Question everything. The news, school, trends, even your own thoughts. Most people are programmed — you&apos;re here to unplug.</p>
+  </div>
+
+  <div className="mission-card">
+    <h3>🧬 2. Decode the System</h3>
+    <p>Study the tools they use to control — media, mindset, systems. Master them. Then flip the script and use them to create your own reality.</p>
+  </div>
+
+  <div className="mission-card">
+    <h3>🌍 3. Exit the Simulation</h3>
+    <p>Detach from mental slavery. Build yourself. Develop your mind, body, and spirit. Leave behind the predictable path and create your own mission.</p>
+  </div>
+
+  <div className="mission-card">
+    <h3>🛰 4. Guide Others</h3>
+    <p>Document your journey. Speak truth. Share knowledge. The system fears awakened minds — become the signal others can follow.</p>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="explore-footer">
