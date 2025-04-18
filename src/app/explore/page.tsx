@@ -43,35 +43,7 @@ const Explore: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2: Experiments & Projects */}
-      <section className="explore-section projects">
-        <h2 className="section-title">Experiments & Projects</h2>
-        <div className="project-card">
-          <h3>🧠 Brain-Linked AI Vision</h3>
-          <p>Prototyping an artificial vision system using open-source AI + brain signal mapping. Blindness might not be permanent in the future.</p>
-        </div>
-        <div className="project-card">
-          <h3>🧍 LLaMA Bot with Real-Time Vision</h3>
-          <p>Combining speech and camera input for a smart assistant — feels like building digital consciousness.</p>
-        </div>
-      </section>
-
-      {/* Section 3: Glitches & Observations */}
-      <section className="explore-section glitches">
-        <h2 className="section-title">Glitches & Observations</h2>
-        <div className="journal-post">
-          <h3>🔁 Déjà vu Log #4</h3>
-          <p>
-            I heard someone say something I had dreamt the night before. Exact words. Different day. Different place.
-          </p>
-        </div>
-        <div className="journal-post">
-          <h3>🌀 Mandela Effect?</h3>
-          <p>
-            I clearly remember a location having red tiles. Visited today, they were green. My sister remembers them red too. Something shifted.
-          </p>
-        </div>
-      </section>
+   
 
       {/* Divider Images */}
       <div className="illusion-image-section">
