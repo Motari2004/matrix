@@ -58,7 +58,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2.5rem; /* ⬅️ Increased from 1.5rem to 2.5rem for bigger vertical spacing */
   margin-bottom: 3rem;
 }
 
@@ -73,7 +73,7 @@ button {
   transition: all 0.3s ease;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
   color: white;
-  gap: 5rem;
+  
 }
 
 button:hover {
@@ -121,8 +121,7 @@ footer {
 
   .pill-buttons {
     flex-direction: column;
-    gap: 4rem;
-  }
+    gap: 2.5rem; /* ⬅️ Also increased on mobile */
 
   button {
     width: 100%;
