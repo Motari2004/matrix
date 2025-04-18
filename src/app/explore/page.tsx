@@ -48,7 +48,7 @@ const Explore: React.FC = () => {
 
       {/* Divider: Illusion Image Grid */}
       <div className="illusion-grid">
-        <Image src="/images/10.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
+        <Image src="/images/1.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
         <Image src="/images/illusion3.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
         <Image src="/images/illusion4.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" /> <Image src="/images/illusion4.jpg" alt="Illusion 4" width={300} height={200} className="illusion-grid-img" />
       </div>
