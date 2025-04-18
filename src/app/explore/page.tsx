@@ -55,7 +55,7 @@ const Explore: React.FC = () => {
         </div>
         <div className="illusion-item">
           <Image src="/images/illusion4.JPG" alt="Illusion 4" width={300} height={200} className="illusion-grid-img" />
-          <p className="image-caption">Illusion 4</p>
+          <p className="image-caption">You came to dance with life, not to survive it.</p>
         </div>
       </div>
 
