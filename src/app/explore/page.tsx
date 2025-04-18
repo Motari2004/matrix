@@ -79,10 +79,10 @@ const Explore: React.FC = () => {
 
       </div>
       <div className="illusion-image-section">
-        <Image src="/images/illusion3.jpg" alt="The Illusion" width={300} height={200} className="illusion-image" />
+        <Image src="/images/illusion3.JPG" alt="The Illusion" width={300} height={200} className="illusion-image" />
       </div>
       <div className="illusion-image-section">
-        <Image src="/images/illusion4.jpg" alt="The Illusion" width={300} height={200} className="illusion-image" />
+        <Image src="/images/illusion4.JPG" alt="The Illusion" width={300} height={200} className="illusion-image" />
       </div>
 
       {/* Section 4: What To Do in the Matrix */}
