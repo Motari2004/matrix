@@ -368,33 +368,3 @@ body {
   text-decoration: underline;
 }
 
-
-
-@media (max-width: 768px) {
-  .home-container {
-    padding: 1rem; /* Adjust spacing for smaller devices */
-  }
-
-  .title {
-    font-size: 2.2rem; /* Reduces font size slightly */
-    margin-top: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1.3rem; /* Adjusts subtitle size */
-  }
-
-  .section-heading {
-    font-size: 1.5rem;
-  }
-
-  .content-container {
-    padding: 0 1rem; /* Reduces padding for narrow screens */
-  }
-
-  .matrix-updates .update-cards,
-  .quotes-grid,
-  .africa-cards {
-    grid-template-columns: 1fr; /* Displays items in a single column */
-  }
-}
