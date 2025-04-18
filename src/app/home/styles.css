@@ -356,3 +356,73 @@ body {
 .profile-link:hover {
   text-decoration: underline;
 }
+
+
+
+
+/* Mobile-first adjustments for smaller screens */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .matrix-updates .update-cards {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .quotes-grid, .africa-cards {
+    grid-template-columns: 1fr; /* Stack items vertically */
+  }
+
+  .illusion-grid {
+    grid-template-columns: 1fr; /* Adjusts image layout for small devices */
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .footer-nav a {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+.illusion-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Provides uniform spacing */
+  margin-top: 2rem;
+}
+
+.illusion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 300px; /* Ensures the images align nicely */
+}
+
+.image-caption {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+}
