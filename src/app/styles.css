@@ -1,28 +1,28 @@
-/* General Page Layout */
-body {
+/* Ensure full screen height and proper layout */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #0c5007f5, #000000, #0d6601);
-  color: #4caf50;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right, #0c5007f5, #000000, #0d6601);
+  color: #4caf50;
 }
 
-/* Main Container */
+/* Main content fills available space */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   padding: 2rem 1rem;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
-/* Headline */
+/* Headline Styles */
 h1 {
   font-size: 3rem;
   color: white;
@@ -30,47 +30,52 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
   text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
   animation: pulse 2s infinite;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
-/* Paragraph */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Paragraph Styling */
 p {
   font-size: 1.125rem;
   color: white;
   opacity: 0.9;
   max-width: 50rem;
-  margin-bottom: 2rem;
   line-height: 1.5;
   letter-spacing: 0.02rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
-/* Pills Container */
+/* Pill Button Container */
 .pill-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   margin-bottom: 3rem;
-  width: 100%;
-  max-width: 500px;
 }
 
-/* Buttons */
-.pill-buttons button {
+/* Button Styles */
+button {
   font-size: 1.125rem;
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 9999px;
   text-transform: uppercase;
-  width: 100%;
-  max-width: 300px;
+  cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
-.pill-buttons button:hover {
-  transform: scale(1.05);
+button:hover {
+  transform: scale(1.1);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
 }
 
@@ -90,34 +95,36 @@ p {
   background-color: #2b6cb0;
 }
 
-/* Footer */
+/* Footer sticks to bottom */
 footer {
-  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
   font-size: 0.875rem;
   color: white;
   opacity: 0.7;
-  text-align: center;
-  padding: 1rem 0;
 }
 
-/* Responsive Tweaks */
+/* Responsive adjustments for small screens */
 @media (max-width: 640px) {
   h1 {
     font-size: 2rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
   p {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .pill-buttons {
     flex-direction: column;
+    gap: 1rem;
   }
 
-  .pill-buttons button {
+  button {
     width: 100%;
-    padding: 1rem;
+    max-width: 300px;
+    padding: 1rem 1.5rem;
   }
 }
