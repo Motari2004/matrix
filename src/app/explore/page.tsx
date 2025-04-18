@@ -28,6 +28,20 @@ const Explore: React.FC = () => {
         <h1 className="section-title">Inside the Simulation</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
 
+        {/* Image Button */}
+        <div className="illusion-grid">
+          <button className="image-btn">
+            <Image
+              src="/images/illusion1.jpg"
+              alt="Inside the Simulation"
+              width={300}
+              height={200}
+              className="illusion-grid-img"
+            />
+            <span>Explore the Simulation</span>
+          </button>
+        </div>
+
         <div className="journal-post">
           <h3>🧬 April 17, 2025</h3>
           <p>
@@ -45,13 +59,6 @@ const Explore: React.FC = () => {
           </p>
         </div>
       </section>
-
-      {/* Divider: Illusion Image Grid */}
-      <div className="illusion-grid">
-        <Image src="/images/1.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
-        <Image src="/images/illusion3.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
-        <Image src="/images/illusion4.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" /> <Image src="/images/illusion4.jpg" alt="Illusion 4" width={300} height={200} className="illusion-grid-img" />
-      </div>
 
       {/* Section: What To Do in the Matrix */}
       <section className="explore-section missions">
@@ -73,20 +80,39 @@ const Explore: React.FC = () => {
           </p>
         </div>
 
-        <div className="mission-card">
-          <h3>🚪 3. Escape the Loop</h3>
-          <p>
-            Leave mentally, financially, spiritually. Grow. Build. Detach. Rewrite your purpose. 
-            Transcend the patterns.
-          </p>
-        </div>
+        <div className="illusion-grid">
+          <button className="image-btn">
+            <Image
+              src="/images/illusion2.jpg"
+              alt="Hack the Code"
+              width={300}
+              height={200}
+              className="illusion-grid-img"
+            />
+            <span>Hack the Matrix</span>
+          </button>
 
-        <div className="mission-card">
-          <h3>💡 4. Leave Clues for Others</h3>
-          <p>
-            Don&rsquo;t just escape — document. Inspire. Build tools, write logs, share glitches. 
-            Help others break out too.
-          </p>
+          <button className="image-btn">
+            <Image
+              src="/images/illusion3.jpg"
+              alt="Escape the Loop"
+              width={300}
+              height={200}
+              className="illusion-grid-img"
+            />
+            <span>Escape the Matrix</span>
+          </button>
+
+          <button className="image-btn">
+            <Image
+              src="/images/illusion4.jpg"
+              alt="Leave Clues"
+              width={300}
+              height={200}
+              className="illusion-grid-img"
+            />
+            <span>Leave Clues Behind</span>
+          </button>
         </div>
       </section>
 
