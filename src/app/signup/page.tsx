@@ -1,105 +1,86 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
-
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import './styles.css';
 
-export default function SignupPage() {
-  const [email, setEmail] = useState('');
+export default function LoginPage() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [shock, setShock] = useState(false);
-  const [wave, setWave] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Fix for SSR hydration issues
-  const [loaded, setLoaded] = useState(false); // Added to delay animations
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+  const [matrixLines, setMatrixLines] = useState<string[]>([]);
   const router = useRouter();
 
   useEffect(() => {
-    // Ensure it runs only on the client-side
-    setIsClient(true);
-
-    if (isClient) {
-      const timeout = setTimeout(() => {
-        setLoaded(true); // Trigger animations only after page stabilizes
-        cycleEffect(); // Start animation cycle
-      }, 500); // 500ms delay to stabilize the layout
-      return () => clearTimeout(timeout); // Cleanup on unmount
-    }
-  }, [isClient]);
-
-  // Ensure `cycleEffect` is memoized to prevent missing dependency warnings
-  const cycleEffect = () => {
-    setShock(true); // Trigger shock animation
-    setTimeout(() => {
-      setShock(false); // Stop shock after 2s
-      setWave(true); // Trigger wave animation
-      setTimeout(() => {
-        setWave(false); // Stop wave after 6s
-        cycleEffect(); // Restart the cycle
-      }, 6000); // 6 seconds for wave
-    }, 2000); // 2 seconds for shock
-  };
+    // Generate dynamic binary lines for matrix effect
+    const generateMatrixLines = () => {
+      const lines = Array.from({ length: 40 }, () =>
+        Array.from({ length: 20 }, () => (Math.random() > 0.5 ? '1' : '0')).join('')
+      );
+      setMatrixLines(lines);
+    };
+    generateMatrixLines();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
-
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
-      return;
-    }
 
     try {
-      const response = await fetch('/api/signup', {
+      const res = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
-      const data = await response.json();
+      const data = await res.json();
 
-      if (response.ok) {
-        setSuccess('Account created successfully!');
-        setTimeout(() => {
-          router.push('/login');
-        }, 1500);
-      } else {
-        setError(data.error || 'Signup failed.');
+      if (!res.ok) {
+        alert(data.message || 'Login failed');
+        return;
       }
-    } catch {
-      setError('Server error. Please try again.');
+
+      if (data && data.user) {
+        if (rememberMe) {
+          localStorage.setItem('userSession', JSON.stringify(data.user));
+        }
+        router.push('/home');
+      } else {
+        alert('Login failed: Invalid response format');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+      console.error('Login error:', error);
     }
   };
 
-  // Prevent SSR rendering until client is ready
-  if (!isClient) return null;
-
   return (
-    <main className={`signup-container ${loaded ? (shock ? 'shock' : '') + (wave ? 'wave' : '') : ''}`}>
-      <div className="matrix-code"></div>
+    <main className="login-container">
+      <div className="matrix-code">
+        {matrixLines.map((line, index) => (
+          <span key={index} className="matrix-line" style={{ animationDelay: `${index * 0.1}s` }}>
+            {line}
+          </span>
+        ))}
+      </div>
+
       <div className="form-container">
-        <h1 className="text-white text-4xl font-bold text-center mb-6">Sign Up</h1>
+        <h1 className="text-white text-4xl font-bold text-center mb-6">Login</h1>
 
-        {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
-        {success && <p className="text-green-500 mb-4 text-center">{success}</p>}
-
-        <form onSubmit={handleSubmit} className="signup-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <div className="input-group">
             <label htmlFor="username" className="text-white block mb-2">Username</label>
             <input
               type="text"
               id="username"
               className="input-field"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
+
           <div className="input-group">
             <label htmlFor="password" className="text-white block mb-2">Password</label>
             <input
@@ -111,23 +92,25 @@ export default function SignupPage() {
               required
             />
           </div>
-          <div className="input-group">
-            <label htmlFor="confirm-password" className="text-white block mb-2">Confirm Password</label>
+
+          <div className="text-left text-white flex items-center gap-2">
             <input
-              type="password"
-              id="confirm-password"
-              className="input-field"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
+              type="checkbox"
+              id="remember"
+              checked={rememberMe}
+              onChange={() => setRememberMe(!rememberMe)}
             />
+            <label htmlFor="remember">Remember Me</label>
           </div>
 
           <button type="submit" className="submit-button mt-4">
-            Create Account
+            Login
           </button>
         </form>
-        <p className="text-white mt-4">Already have an account? <a href="/login" className="text-blue-400 underline">Login here</a>.</p>
+
+        <footer className="text-white text-center mt-8 opacity-70">
+          <p>Don't have an account? <a href="/signup" className="text-green-400">Sign Up</a></p>
+        </footer>
       </div>
     </main>
   );
