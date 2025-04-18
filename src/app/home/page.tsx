@@ -63,7 +63,7 @@ export default function HomePage() {
               <span className="quote-author">— Augustine</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">Africa must unite. It is the only way for us to break the chains of colonization and economic slavery.</p>
+              <p className="quote-text">&ldquo;Africa must unite. It is the only way for us to break the chains of colonization and economic slavery.&rdquo;</p>
               <span className="quote-author">— Muammar Gaddafi</span>
             </div>
             <div className="quote-card">
