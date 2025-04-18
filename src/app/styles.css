@@ -96,12 +96,14 @@ button:hover {
 }
 
 footer {
+  margin-top: auto; /* Push footer to the bottom */
   text-align: center;
   padding: 1rem 0;
   font-size: 0.875rem;
   color: white;
   opacity: 0.7;
 }
+
 
 /* Responsive adjustments for small screens */
 @media (max-width: 640px) {
@@ -126,8 +128,22 @@ footer {
   
 
   button {
-    width: 100%;
-    max-width: 300px;
-    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%; /* Make buttons full width */
+    max-width: 300px; /* Limit the width to 300px */
   }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  
 }
