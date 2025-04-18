@@ -24,26 +24,32 @@ body {
 
 .content-container {
   text-align: center;
+  max-width: 1200px; /* Ensures content stays within reasonable width on larger screens */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 2rem; /* Prevents content from touching screen edges */
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem; /* Larger font size for striking impact */
   font-weight: bold;
-  margin-top: 3rem;
-  color: rgb(255, 123, 0);
+  margin-bottom: 1rem;
+  color: rgb(255, 123, 0); /* Ensures visibility */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
 }
 
 .subtitle {
-  font-size: 1.7rem;
-  color: #ece800; /* Updated to better contrast on dark background */
-  margin-top: 2rem;
+  font-size: 1.8rem; /* Slight increase for better readability */
+  margin-bottom: 2rem;
+  color: #ece800;
 }
 
 .section-heading {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #db0b0b; /* Matches the rest of the site theme */
+  margin: 1.5rem 0;
+  color: #db0b0b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Matrix Updates Section */
 .matrix-updates {
@@ -363,3 +369,32 @@ body {
 }
 
 
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem; /* Adjust spacing for smaller devices */
+  }
+
+  .title {
+    font-size: 2.2rem; /* Reduces font size slightly */
+    margin-top: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem; /* Adjusts subtitle size */
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .content-container {
+    padding: 0 1rem; /* Reduces padding for narrow screens */
+  }
+
+  .matrix-updates .update-cards,
+  .quotes-grid,
+  .africa-cards {
+    grid-template-columns: 1fr; /* Displays items in a single column */
+  }
+}
