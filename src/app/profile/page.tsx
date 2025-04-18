@@ -47,7 +47,7 @@ export default function ProfilePage() {
   }
 
   // Referral link that redirects to illusionmatrix.com and includes the referral username
-  const referralLink = `https://illusionmatrix.com?ref=${userData.username}`;
+  const referralLink = `matrix-xi-nine.vercel.app?ref=${userData.username}`;
 
   return (
     <main className="user-profile-page">
