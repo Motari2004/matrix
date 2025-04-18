@@ -143,6 +143,7 @@ button {
 
   p {
     font-size: 1rem;
+    margin-top: 3px;
   }
 
   .pill-buttons {
