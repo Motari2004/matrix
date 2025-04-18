@@ -19,6 +19,7 @@ body {
   padding: 1.5rem; /* Adds breathing space */
   align-items: center; /* Centers content horizontally */
   justify-content: center; /* Centers content vertically */
+  overflow: auto;
 }
 
 
