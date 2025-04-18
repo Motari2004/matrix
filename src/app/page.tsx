@@ -38,7 +38,7 @@ export default function IntroPage() {
       </h1>
 
       <p>
-        This is your moment, the moment where everything changes. Once you make your choice, there&apos;s no turning back.
+        This is your moment, the moment where everything changes.make your choice.
         If you take the blue pill, the story ends, and everything goes back to the way it was — the comfort of what you know, 
         the illusion of simplicity. But if you take the red pill, you stay in Wonderland, and I’ll show you the true depth of what’s hidden. 
         The journey will be unsettling, but it’s the only path to the truth.
