@@ -32,7 +32,7 @@ const Explore: React.FC = () => {
         <div className="illusion-grid">
           <button className="image-btn">
             <Image
-              src="/images/illusion1.jpg"
+              src="/images/illusion2.jpg"
               alt="Inside the Simulation"
               width={300}
               height={200}
