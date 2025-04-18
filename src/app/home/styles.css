@@ -1,0 +1,358 @@
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a1a1d, #3a3a52); /* Deep matrix-style gradient */
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes full height of the viewport */
+}
+
+.content-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  color: rgb(255, 123, 0);
+}
+
+.subtitle {
+  font-size: 1.7rem;
+  color: #ece800; /* Updated to better contrast on dark background */
+  margin-top: 2rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #db0b0b; /* Matches the rest of the site theme */
+}
+
+/* Matrix Updates Section */
+.matrix-updates {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.matrix-updates .update-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 4rem;
+  
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #eeeeee;
+  margin-top: 2rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1rem 1rem 0.5rem;
+  color: #070707;
+}
+
+.card-text {
+  font-size: 1rem;
+  padding: 0 1rem 1.5rem;
+  color: #ffffff;
+}
+
+
+.update-card {
+  background: #5f553f;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-family: system-ui, sans-serif; /* Native system font */
+  font-size: 1rem;
+  color: #ffffff; /* Neon green Matrix vibe */
+  line-height: 1.6;
+
+  margin-bottom: 1rem;
+}
+
+
+
+.read-more-link {
+  color: #4fc3f7;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+  color: #29b6f6;
+}
+
+
+
+
+.voices-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0c3314, #3a3a52); /* Deep matrix-style gradient */
+  color: #ffffff;
+}
+
+.section-heading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quotes-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.quote-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #c0c0c0;
+}
+
+
+
+
+
+.actions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #2980b9;
+}
+
+
+.card-text{
+  color: #fff;
+}
+
+.africa-intro{
+  color: rgb(0, 243, 243);
+}
+
+
+
+
+
+
+.africa-richness {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1d4923, #02644f); /* Deep matrix-style gradient */
+  text-align: center;
+}
+
+
+
+.africa-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.africa-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.africa-card {
+  background-color: #0f0f0f;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+.africa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.africa-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background: #111;
+  color: #d0ff00;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #00ff99;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav li {
+  margin: 0.5rem 0;
+}
+
+.footer-nav a {
+  color: #7f8b0d;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact h3 {
+  color: #16b7d4;
+  font-size: 2rem;
+  margin-top: 1px;
+}
+
+.footer-contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.footer-contact p {
+  margin: 0.3rem 0;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+
+
+/* Profile Tab - Position at the right side */
+.profile-tab {
+  position: fixed;
+  top: 10px; /* Adjust to your desired distance from the top */
+  right: 100px; /* Position it on the right side */
+  background-color: #333; /* Background color for the tab */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Ensures it's always on top */
+}
+
+.profile-link {
+  color: #fff; /* White text color */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}

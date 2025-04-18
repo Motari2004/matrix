@@ -1,0 +1,141 @@
+/* General page styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in dimensions */
+  }
+  
+
+
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers child elements vertically */
+    align-items: center;    /* Centers child elements horizontally */
+    min-height: 100vh;      /* Ensures full height of viewport */
+    background-color: #000;
+    overflow: hidden;       /* Prevents layout shifting */
+    position: relative;
+  }
+  
+  .form-container {
+    padding: 40px 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Input and button styles */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .submit-button {
+    margin-top: 20px; /* Prevents collapsing into footer */
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer styles */
+  footer {
+    padding-top: 20px; /* Replaces margin to avoid layout collapsing */
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  
+  footer a {
+    color: #28a745;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Matrix effect styles */
+  .matrix-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    animation: matrix 3s infinite linear;
+  }
+  
+  .matrix-code:before {
+    content: '0 1';
+    white-space: nowrap;
+    font-family: "Courier New", Courier, monospace;
+    color: green;
+    font-size: 2rem;
+    position: absolute;
+    animation: scroll 1s infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+  }
+  
+  @keyframes matrix {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+  
+  /* Shock effect styles */
+  .signup-container.shock {
+    animation: shake 2s ease infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Wave effect styles */
+  .signup-container.wave {
+    animation: wave 6s ease-in-out infinite;
+  }
+  
+  @keyframes wave {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
