@@ -73,6 +73,7 @@ button {
   transition: all 0.3s ease;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
   color: white;
+  gap: 5rem;
 }
 
 button:hover {
