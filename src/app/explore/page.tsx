@@ -47,11 +47,11 @@ const Explore: React.FC = () => {
       <div className="illusion-grid">
         <div className="illusion-item">
           <Image src="/images/illusion2.JPG" alt="Illusion 2" width={300} height={200} className="illusion-grid-img" />
-          <p className="image-caption">Illusion 2</p>
+          <p className="image-caption">Wake up,the cage is made up of thoughts</p>
         </div>
         <div className="illusion-item">
           <Image src="/images/illusion3.JPG" alt="Illusion 3" width={300} height={200} className="illusion-grid-img" />
-          <p className="image-caption">Illusion 3</p>
+          <p className="image-caption">Freedom is your birthright. They just buried it under rules, fears, and fake dreams.</p>
         </div>
         <div className="illusion-item">
           <Image src="/images/illusion4.JPG" alt="Illusion 4" width={300} height={200} className="illusion-grid-img" />
