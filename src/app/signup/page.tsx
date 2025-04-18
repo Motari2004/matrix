@@ -127,7 +127,9 @@ export default function SignupPage() {
             Create Account
           </button>
         </form>
-        <p className="text-white mt-4">Already have an account? <a href="/login" className="text-blue-400 underline">Login here</a>.</p>
+        <p className="text-white mt-4">
+  Already have an account? <a href="/login" className="text-purple-500 underline">Login here</a>.
+</p>
       </div>
     </main>
   );

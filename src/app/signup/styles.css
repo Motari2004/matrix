@@ -140,4 +140,8 @@
   }
   
 
+  .login-link {
+    color: #FF6B6B; /* any hex color you like */
+    text-decoration: underline;
+  }
   
