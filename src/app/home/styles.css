@@ -14,31 +14,24 @@ body {
 .home-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 100vw; /* Keeps the container within screen limits */
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  margin: 0 auto; /* Centers the container horizontally */
-  padding: 1rem; /* Adds some spacing inside the container */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  min-height: 100vh; /* Ensure the container takes full height of the viewport */
 }
-
-
 
 .content-container {
   text-align: center;
 }
 
-/* Title and Subtitle */
 .title {
-  font-size: 2rem; /* Moderate size for better readability */
-  text-align: center;
-  word-wrap: break-word; /* Prevent text from overflowing */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  color: rgb(255, 123, 0);
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 0 1rem; /* Prevent text from touching screen edges */
+  font-size: 1.7rem;
+  color: #ece800; /* Updated to better contrast on dark background */
+  margin-top: 2rem;
 }
 
 .section-heading {
@@ -367,3 +360,28 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem; /* Scales down the title */
+  }
+
+  .subtitle {
+    font-size: 1.2rem; /* Scales down the subtitle */
+    padding: 0 0.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem; /* Adjusts heading size */
+  }
+
+  .content-container {
+    padding: 0 1rem; /* Reduces padding */
+  }
+
+  .matrix-updates .update-card,
+  .africa-cards .africa-card,
+  .quotes-grid .quote-card {
+    width: 100%; /* Ensures elements fit within the screen */
+    margin: auto; /* Centers the cards */
+  }
+}
