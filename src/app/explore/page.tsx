@@ -5,10 +5,10 @@ import Image from 'next/image';
 import './styles.css';
 
 const rotatingQuotes = [
-  "Exploring beyond the veil of code...",
-  "Reality is editable. Question everything.",
-  "Dreams are downloads from the Source.",
-  "Break the loop. Hack your reality.",
+  'Exploring beyond the veil of code...',
+  'Reality is editable. Question everything.',
+  'Dreams are downloads from the Source.',
+  'Break the loop. Hack your reality.',
 ];
 
 const Explore: React.FC = () => {
@@ -23,11 +23,10 @@ const Explore: React.FC = () => {
 
   return (
     <div className="explore-container">
-      
       {/* Section: Inside the Simulation */}
       <section className="explore-section">
         <h1 className="section-title">Inside the Simulation</h1>
-        <p className="rotating-quote">&quot;{rotatingQuotes[quoteIndex]}&quot;</p>
+        <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
 
         <div className="journal-post">
           <h3>🧬 April 17, 2025</h3>
@@ -49,27 +48,9 @@ const Explore: React.FC = () => {
 
       {/* Divider: Illusion Image Grid */}
       <div className="illusion-grid">
-      <Image 
-  src="/images/illusion2.jpg" 
-  alt="Illusion 2" 
-  className="illusion-grid-img" 
-  width={500} 
-  height={500} 
-/>
-<Image 
-  src="/images/illusion2.jpg" 
-  alt="Illusion 2" 
-  className="illusion-grid-img" 
-  width={500} 
-  height={500} 
-/>
-<Image 
-  src="/images/illusion2.jpg" 
-  alt="Illusion 2" 
-  className="illusion-grid-img" 
-  width={500} 
-  height={500} 
-/>
+        <Image src="/images/illusion2.jpg" alt="Illusion 2" width={300} height={200} className="illusion-grid-img" />
+        <Image src="/images/illusion3.jpg" alt="Illusion 3" width={300} height={200} className="illusion-grid-img" />
+        <Image src="/images/illusion4.jpg" alt="Illusion 4" width={300} height={200} className="illusion-grid-img" />
       </div>
 
       {/* Section: What To Do in the Matrix */}
@@ -80,7 +61,7 @@ const Explore: React.FC = () => {
           <h3>🔓 1. Wake Up</h3>
           <p>
             Notice the script. See the loops. Realize most people are just reacting, not creating. 
-            You&apos;re not here to follow blindly.
+            You&rsquo;re not here to follow blindly.
           </p>
         </div>
 
@@ -103,7 +84,7 @@ const Explore: React.FC = () => {
         <div className="mission-card">
           <h3>💡 4. Leave Clues for Others</h3>
           <p>
-            Don’t just escape — document. Inspire. Build tools, write logs, share glitches. 
+            Don&rsquo;t just escape — document. Inspire. Build tools, write logs, share glitches. 
             Help others break out too.
           </p>
         </div>
@@ -111,7 +92,7 @@ const Explore: React.FC = () => {
 
       {/* Footer */}
       <footer className="explore-footer">
-        <p>©2025 Scorpio — All rights decrypted</p>
+        <p>&copy;2025 Scorpio — All rights decrypted</p>
       </footer>
     </div>
   );
