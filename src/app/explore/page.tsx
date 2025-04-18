@@ -75,7 +75,7 @@ const Explore: React.FC = () => {
 
       {/* Divider Images */}
       <div className="illusion-image-section">
-      <Image src="/images/illusion1.jpg" alt="Illusion" width={300} height={200} />
+      <Image src="/images/illusion2.JPG" alt="Illusion" width={300} height={200} />
 
       </div>
       <div className="illusion-image-section">
