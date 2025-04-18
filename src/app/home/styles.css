@@ -1,7 +1,3 @@
-
-
-
-
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #1a1a1d, #3a3a52); /* Deep matrix-style gradient */
@@ -9,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  box-sizing: border-box;
 }
 
 .home-container {
@@ -46,7 +43,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .matrix-updates .update-cards {
@@ -56,7 +52,6 @@ body {
   max-width: 1200px;
   width: 100%;
   margin-bottom: 4rem;
-  
 }
 
 .section-heading {
@@ -79,7 +74,6 @@ body {
   padding: 0 1rem 1.5rem;
   color: #ffffff;
 }
-
 
 .update-card {
   background: #5f553f;
@@ -110,8 +104,6 @@ body {
   margin-bottom: 1rem;
 }
 
-
-
 .read-more-link {
   color: #4fc3f7;
   text-decoration: underline;
@@ -121,9 +113,6 @@ body {
 .read-more-link:hover {
   color: #29b6f6;
 }
-
-
-
 
 .voices-section {
   padding: 4rem 2rem;
@@ -168,10 +157,6 @@ body {
   color: #c0c0c0;
 }
 
-
-
-
-
 .actions {
   margin-top: 50px;
   display: flex;
@@ -193,27 +178,19 @@ body {
   background-color: #2980b9;
 }
 
-
-.card-text{
+.card-text {
   color: #fff;
 }
 
-.africa-intro{
+.africa-intro {
   color: rgb(0, 243, 243);
 }
-
-
-
-
-
 
 .africa-richness {
   padding: 4rem 2rem;
   background: linear-gradient(to right, #1d4923, #02644f); /* Deep matrix-style gradient */
   text-align: center;
 }
-
-
 
 .africa-intro {
   max-width: 800px;
@@ -232,7 +209,7 @@ body {
 .africa-card {
   background-color: #0f0f0f;
   border-radius: 1rem;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 100%;
@@ -240,7 +217,7 @@ body {
 
 .africa-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .africa-image {
@@ -248,23 +225,6 @@ body {
   height: 200px;
   object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
   background: #111;
@@ -332,9 +292,6 @@ body {
   color: #ccc;
 }
 
-
-
-
 /* Profile Tab - Position at the right side */
 .profile-tab {
   position: fixed;
@@ -357,6 +314,57 @@ body {
   text-decoration: underline;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
 
+  .subtitle {
+    font-size: 1.2rem;
+  }
 
+  .section-heading {
+    font-size: 1.5rem;
+  }
 
+  .matrix-updates .update-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 1.5rem;
+  }
+
+  .profile-tab {
+    top: 10px;
+    right: 15px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav a {
+    font-size: 1.2rem;
+  }
+}
