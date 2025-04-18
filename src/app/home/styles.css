@@ -14,43 +14,33 @@ body {
 .home-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%; /* Ensures full width */
-  padding: 1.5rem; /* Adds breathing space */
-  align-items: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
+  min-height: 100vh; /* Ensure the container takes full height of the viewport */
   overflow: auto;
+  width: fit-content;
 }
-
 
 .content-container {
   text-align: center;
-  max-width: 1200px; /* Ensures content stays within reasonable width on larger screens */
-  margin: 0 auto; /* Centers the container horizontally */
-  padding: 0 2rem; /* Prevents content from touching screen edges */
 }
 
 .title {
-  font-size: 3rem; /* Larger font size for striking impact */
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: rgb(255, 123, 0); /* Ensures visibility */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Adds depth */
+  margin-top: 3rem;
+  color: rgb(255, 123, 0);
 }
 
 .subtitle {
-  font-size: 1.8rem; /* Slight increase for better readability */
-  margin-bottom: 2rem;
-  color: #ece800;
+  font-size: 1.7rem;
+  color: #ece800; /* Updated to better contrast on dark background */
+  margin-top: 2rem;
 }
 
 .section-heading {
   font-size: 2rem;
-  margin: 1.5rem 0;
-  color: #db0b0b;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+  color: #db0b0b; /* Matches the rest of the site theme */
 }
-
 
 /* Matrix Updates Section */
 .matrix-updates {
@@ -368,4 +358,5 @@ body {
 .profile-link:hover {
   text-decoration: underline;
 }
+
 
