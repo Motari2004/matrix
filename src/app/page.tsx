@@ -1,10 +1,20 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import './styles.css';
 
 export default function IntroPage() {
   const router = useRouter();
+
+  useEffect(() => {
+    const hasSeenIntro = localStorage.getItem('hasSeenIntro');
+    if (hasSeenIntro) {
+      router.push('/login'); // redirect if they've already seen it
+    } else {
+      localStorage.setItem('hasSeenIntro', 'true'); // mark as seen
+    }
+  }, [router]);
 
   const handleRedPill = () => {
     router.push('/signup');
@@ -15,7 +25,7 @@ export default function IntroPage() {
   };
 
   return (
-    <main>
+    <main className="intro-page">
       <h1>
         Wake up... You’ve been living in the Matrix all along.
       </h1>
