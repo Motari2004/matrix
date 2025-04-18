@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <main className="home-container">
       <div className="content-container">
-        {/* Profile Tab */}
+        {/* Profile Tab at the top */}
         <div className="profile-tab">
           <a href="/profile" className="profile-link">Profile</a>
         </div>
@@ -54,15 +54,15 @@ export default function HomePage() {
               <span className="quote-author">— Bob Marley</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">&ldquo;They don&apos;t want you to know the truth because once you do, you&apos;re no longer easy to control.&rdquo;</p>
+              <p className="quote-text">&ldquo;They don&rsquo;t want you to know the truth because once you do, you&rsquo;re no longer easy to control.&rdquo;</p>
               <span className="quote-author">— Anonymous (Truth Seeker)</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">&ldquo;The truth is like a lion. You don&apos;t have to defend it. Let it loose. It will defend itself.&rdquo;</p>
+              <p className="quote-text">&ldquo;The truth is like a lion. You don&rsquo;t have to defend it. Let it loose. It will defend itself.&rdquo;</p>
               <span className="quote-author">— Augustine</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">&ldquo;I&apos;m not saying I&apos;m gonna change the world, but I guarantee that I will spark the brain that will.&rdquo;</p>
+              <p className="quote-text">&ldquo;I&rsquo;m not saying I&rsquo;m gonna change the world, but I guarantee that I will spark the brain that will.&rdquo;</p>
               <span className="quote-author">— Tupac Shakur</span>
             </div>
             <div className="quote-card">
@@ -78,6 +78,7 @@ export default function HomePage() {
           <p className="africa-intro">
             Africa, a continent that is often misunderstood, is a land of immense cultural, historical, and natural wealth. From its ancient civilizations to its modern contributions, Africa&rsquo;s richness is undeniable. Let&rsquo;s explore the wonders and resources that make Africa a vital part of the global stage.
           </p>
+
           <div className="africa-cards">
             <div className="africa-card">
               <Image src="/images/7.jpg" alt="African Diversity" width={300} height={200} className="africa-image" />
@@ -86,11 +87,44 @@ export default function HomePage() {
                 Africa is home to over 3,000 different ethnic groups and languages, each contributing to the vibrant cultural tapestry of the continent.
               </p>
             </div>
+
             <div className="africa-card">
               <Image src="/images/6.jpg" alt="Natural Resources" width={300} height={200} className="africa-image" />
               <h3 className="card-title">Abundant Natural Resources</h3>
               <p className="card-text">
                 Africa is rich in natural resources like gold, diamonds, and oil—key players in the global economy with massive potential for sustainable growth.
+              </p>
+            </div>
+
+            <div className="africa-card">
+              <Image src="/images/4.jpg" alt="Ancient Civilizations" width={300} height={200} className="africa-image" />
+              <h3 className="card-title">Ancient Civilizations</h3>
+              <p className="card-text">
+                Africa is the birthplace of humanity. Civilizations like Egypt, Nubia, and Carthage shaped history through innovations in architecture, writing, and trade.
+              </p>
+            </div>
+
+            <div className="africa-card">
+              <Image src="/images/5.jpg" alt="Tech Innovation" width={300} height={200} className="africa-image" />
+              <h3 className="card-title">Innovative Potential</h3>
+              <p className="card-text">
+                Africa&rsquo;s tech scene is thriving—Nairobi, Lagos, and other hubs are leading in mobile banking, clean energy, and entrepreneurial solutions.
+              </p>
+            </div>
+
+            <div className="africa-card">
+              <Image src="/images/2.jpg" alt="Lions" width={300} height={200} className="africa-image" />
+              <h3 className="card-title">The Majestic Lion</h3>
+              <p className="card-text">
+                Known as the king of the jungle, lions roam African savannas as powerful, majestic symbols of strength and pride.
+              </p>
+            </div>
+
+            <div className="africa-card">
+              <Image src="/images/1.jpg" alt="Elephants" width={300} height={200} className="africa-image" />
+              <h3 className="card-title">The Mighty Elephant</h3>
+              <p className="card-text">
+                Elephants, the giants of the land, are intelligent, emotional, and essential to Africa&rsquo;s ecosystem.
               </p>
             </div>
           </div>
