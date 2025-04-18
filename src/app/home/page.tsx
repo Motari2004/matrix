@@ -63,12 +63,12 @@ export default function HomePage() {
               <span className="quote-author">— Augustine</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">&ldquo;I&rsquo;m not saying I&rsquo;m gonna change the world, but I guarantee that I will spark the brain that will.&rdquo;</p>
-              <span className="quote-author">— Tupac Shakur</span>
+              <p className="quote-text">Africa must unite. It is the only way for us to break the chains of colonization and economic slavery.</p>
+              <span className="quote-author">— Muammar Gaddafi</span>
             </div>
             <div className="quote-card">
-              <p className="quote-text">&ldquo;When the power of love overcomes the love of power, the world will know peace.&rdquo;</p>
-              <span className="quote-author">— Jimi Hendrix</span>
+              <p className="quote-text">&ldquo;A nation that continues year after year to spend more money on military defense than on programs of social uplift is approaching spiritual death..&rdquo;</p>
+              <span className="quote-author">— Martin Luther King Jr</span>
             </div>
           </div>
         </section>
