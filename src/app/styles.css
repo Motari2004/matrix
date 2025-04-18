@@ -122,7 +122,8 @@ footer {
   .pill-buttons {
     flex-direction: column;
     gap: 2.5rem; /* ⬅️ Also increased on mobile */
-
+  }
+  
   button {
     width: 100%;
     max-width: 300px;
