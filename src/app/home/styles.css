@@ -2,12 +2,10 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #1a1a1d, #3a3a52); /* Deep matrix-style gradient */
   color: #ffffff;
-  margin: 0;
-  padding: 0;
+
   overflow: auto;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
 }
 
 .home-container {
