@@ -1,14 +1,13 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import './styles.css';
 
 const rotatingQuotes = [
-  'Exploring beyond the veil of code...',
-  'Reality is editable. Question everything.',
-  'Dreams are downloads from the Source.',
-  'Break the loop. Hack your reality.',
+  "Exploring beyond the veil of code...",
+  "Reality is editable. Question everything.",
+  "Dreams are downloads from the Source.",
+  "Break the loop. Hack your reality.",
 ];
 
 const Explore: React.FC = () => {
@@ -23,24 +22,11 @@ const Explore: React.FC = () => {
 
   return (
     <div className="explore-container">
+      
       {/* Section: Inside the Simulation */}
       <section className="explore-section">
         <h1 className="section-title">Inside the Simulation</h1>
-        <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
-
-        {/* Image Button */}
-        <div className="illusion-grid">
-          <button className="image-btn">
-            <Image
-              src="/images/illusion2.jpg"
-              alt="Inside the Simulation"
-              width={300}
-              height={200}
-              className="illusion-grid-img"
-            />
-            <span>Explore the Simulation</span>
-          </button>
-        </div>
+        <p className="rotating-quote">"{rotatingQuotes[quoteIndex]}"</p>
 
         <div className="journal-post">
           <h3>🧬 April 17, 2025</h3>
@@ -60,6 +46,13 @@ const Explore: React.FC = () => {
         </div>
       </section>
 
+      {/* Divider: Illusion Image Grid */}
+      <div className="illusion-grid">
+        <img src="/images/illusion1.jpg" alt="Illusion 2" className="illusion-grid-img" />
+        <img src="/images/illusion3.jpg" alt="Illusion 3" className="illusion-grid-img" />
+        <img src="/images/illusion4.jpg" alt="Illusion 4" className="illusion-grid-img" />
+      </div>
+
       {/* Section: What To Do in the Matrix */}
       <section className="explore-section missions">
         <h2 className="section-title">What To Do in the Matrix</h2>
@@ -68,7 +61,7 @@ const Explore: React.FC = () => {
           <h3>🔓 1. Wake Up</h3>
           <p>
             Notice the script. See the loops. Realize most people are just reacting, not creating. 
-            You&rsquo;re not here to follow blindly.
+            You're not here to follow blindly.
           </p>
         </div>
 
@@ -80,45 +73,26 @@ const Explore: React.FC = () => {
           </p>
         </div>
 
-        <div className="illusion-grid">
-          <button className="image-btn">
-            <Image
-              src="/images/illusion2.jpg"
-              alt="Hack the Code"
-              width={300}
-              height={200}
-              className="illusion-grid-img"
-            />
-            <span>Hack the Matrix</span>
-          </button>
+        <div className="mission-card">
+          <h3>🚪 3. Escape the Loop</h3>
+          <p>
+            Leave mentally, financially, spiritually. Grow. Build. Detach. Rewrite your purpose. 
+            Transcend the patterns.
+          </p>
+        </div>
 
-          <button className="image-btn">
-            <Image
-              src="/images/illusion3.jpg"
-              alt="Escape the Loop"
-              width={300}
-              height={200}
-              className="illusion-grid-img"
-            />
-            <span>Escape the Matrix</span>
-          </button>
-
-          <button className="image-btn">
-            <Image
-              src="/images/illusion4.jpg"
-              alt="Leave Clues"
-              width={300}
-              height={200}
-              className="illusion-grid-img"
-            />
-            <span>Leave Clues Behind</span>
-          </button>
+        <div className="mission-card">
+          <h3>💡 4. Leave Clues for Others</h3>
+          <p>
+            Don’t just escape — document. Inspire. Build tools, write logs, share glitches. 
+            Help others break out too.
+          </p>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="explore-footer">
-        <p>&copy;2025 Scorpio — All rights decrypted</p>
+        <p>©2025 Scorpio — All rights decrypted</p>
       </footer>
     </div>
   );
