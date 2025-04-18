@@ -9,8 +9,17 @@ export default function IntroPage() {
   const router = useRouter();
 
   useEffect(() => {
-    setShowIntro(true);
-  }, []);
+    const hasVisited = localStorage.getItem('hasVisitedMatrixIntro');
+
+    if (hasVisited) {
+      // If they've visited before, redirect to login
+      router.push('/login');
+    } else {
+      // Mark as visited and show intro
+      localStorage.setItem('hasVisitedMatrixIntro', 'true');
+      setShowIntro(true);
+    }
+  }, [router]);
 
   const handleRedPill = () => {
     router.push('/signup');
