@@ -82,7 +82,7 @@ const Explore: React.FC = () => {
 
       {/* Footer */}
       <footer className="explore-footer">
-        <p>&copy;2025 Hopefrey’s Matrix Hub — All rights decrypted</p>
+        <p>&copy;2025 Scorpio — All rights decrypted</p>
       </footer>
     </div>
   );
