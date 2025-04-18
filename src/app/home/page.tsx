@@ -38,7 +38,8 @@ export default function HomePage() {
             <div className="update-card">
               <h3 className="card-title">Breaking Free from the Matrix</h3>
               <p className="card-text">
-                What would it take to escape the Matrix? Learn more about the steps and mindset necessary to break free from the illusion.
+              This is where all important updates will appear. <br />
+              What does it truly take to escape the Matrix? Discover the mindset and steps needed to break free from the illusion and reclaim your reality.
               </p>
               <a href="/explore" className="read-more-link">Read More</a>
             </div>
