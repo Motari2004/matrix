@@ -129,3 +129,15 @@
     }
   }
   
+
+  .illusion-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .illusion-grid-img {
+    border-radius: 8px; /* Optional: adds rounded corners */
+    object-fit: cover; /* Ensures images are responsive */
+  }
+  

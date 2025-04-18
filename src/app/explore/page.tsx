@@ -49,9 +49,27 @@ const Explore: React.FC = () => {
 
       {/* Divider: Illusion Image Grid */}
       <div className="illusion-grid">
-        <Image src="/images/illusion2.jpg" alt="Illusion 2" className="illusion-grid-img" width={500} height={500} />
-        <Image src="/images/illusion4.jpg" alt="Illusion 4" className="illusion-grid-img" width={500} height={500} />
-        <Image src="/images/illusion4.jpg" alt="Illusion 4" className="illusion-grid-img" width={500} height={500} />
+      <Image 
+  src="/images/illusion2.jpg" 
+  alt="Illusion 2" 
+  className="illusion-grid-img" 
+  width={500} 
+  height={500} 
+/>
+<Image 
+  src="/images/illusion2.jpg" 
+  alt="Illusion 2" 
+  className="illusion-grid-img" 
+  width={500} 
+  height={500} 
+/>
+<Image 
+  src="/images/illusion2.jpg" 
+  alt="Illusion 2" 
+  className="illusion-grid-img" 
+  width={500} 
+  height={500} 
+/>
       </div>
 
       {/* Section: What To Do in the Matrix */}
