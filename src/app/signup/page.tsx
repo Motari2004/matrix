@@ -128,8 +128,9 @@ export default function SignupPage() {
           </button>
         </form>
         <p className="text-white mt-4">
-  Already have an account? <a href="/login" className="text-purple-500 underline">Login here</a>.
+  Already have an account? <a href="/login" className="login-link">Login here</a>.
 </p>
+
       </div>
     </main>
   );
