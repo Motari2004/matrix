@@ -28,17 +28,17 @@ body {
   text-align: center;
 }
 
+/* Title and Subtitle */
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 3rem;
-  color: rgb(255, 123, 0);
+  font-size: 2rem; /* Moderate size for better readability */
+  text-align: center;
+  word-wrap: break-word; /* Prevent text from overflowing */
 }
 
 .subtitle {
-  font-size: 1.7rem;
-  color: #ece800; /* Updated to better contrast on dark background */
-  margin-top: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 1rem; /* Prevent text from touching screen edges */
 }
 
 .section-heading {
