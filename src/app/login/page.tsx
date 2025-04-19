@@ -80,7 +80,7 @@ export default function LoginPage() {
       <div className="matrix-code"></div>
 
       {/* Background music */}
-      <audio ref={audioRef} src="/sounds/login.mp3" loop />
+      <audio ref={audioRef} src="/sounds/matrix.mp3" loop />
 
       <div className="form-container">
         <h1 className="text-white text-4xl font-bold text-center mb-6">Login</h1>
