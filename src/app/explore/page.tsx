@@ -75,7 +75,7 @@ const Explore: React.FC = () => {
 
   <div className="mission-card">
     <h3>🧬 2. Decode the System</h3>
-    <p>Study the tools they use to control — media, mindset, systems. Master them. Then flip the script and use them to create your own reality.</p>
+    <p>Study the tools they use to control — media, mindset, systems. Master them. Then flip the script.</p>
   </div>
 
   <div className="mission-card">
