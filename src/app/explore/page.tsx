@@ -25,14 +25,12 @@ const Explore: React.FC = () => {
     <div className="explore-container">
       {/* Section 1: Inside the Simulation */}
       <section className="explore-section">
-        <h1 className="section-title">Inside the Simulation</h1>
+        <h1 className="section-title">Updates</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
         <div className="journal-post">
           <h3> April 19, 2025</h3>
           <p>
-            The Only Way 
-            <br />
-            Yes the truth is unstettling,let it go through,so my brothers and sisters,question everything,lets teach others too.
+            Do what it takes,find yourself,the real you.
           </p>
         </div>
         <div className="journal-post">
