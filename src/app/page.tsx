@@ -21,7 +21,7 @@ export default function IntroPage() {
     setIsLoading(true);
     setTimeout(() => {
       router.push('/signup');
-    }, 1000); // 1 second loading effect before navigation
+    }, 2000); // 1 second loading effect before navigation
   };
 
   const handleBluePill = () => {
