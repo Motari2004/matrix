@@ -14,7 +14,7 @@ export default function SignupPage() {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [loading, setLoading] = useState(false); // 👈 new state for loading
+  const [loading, setLoading] = useState(false); // New loading state
   const router = useRouter();
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function SignupPage() {
     e.preventDefault();
     setError('');
     setSuccess('');
-    setLoading(true); // 👈 start loading
+    setLoading(true); // Start loading
 
     if (password !== confirmPassword) {
       setLoading(false);
@@ -83,14 +83,14 @@ export default function SignupPage() {
         setSuccess('Account created successfully!');
         setTimeout(() => {
           router.push('/login');
-        }, 2000); // delay before redirect
+        }, 1500);
       } else {
         setError(data.error || 'Signup failed.');
       }
     } catch {
       setError('Server error. Please try again.');
     } finally {
-      setLoading(false); // 👈 stop loading
+      setLoading(false); // Stop loading in all cases
     }
   };
 
@@ -105,7 +105,13 @@ export default function SignupPage() {
 
         {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
         {success && <p className="text-green-500 mb-4 text-center">{success}</p>}
-        {loading && <p className="text-yellow-300 text-center mb-4">Creating your account...</p>}
+
+        {loading && (
+          <div className="text-center text-white mb-4 flex flex-col items-center">
+            <div className="loader mb-2"></div>
+            Creating account...
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="input-group">
@@ -117,7 +123,6 @@ export default function SignupPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              disabled={loading}
             />
           </div>
 
@@ -130,7 +135,6 @@ export default function SignupPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              disabled={loading}
             />
           </div>
 
@@ -143,7 +147,6 @@ export default function SignupPage() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
-              disabled={loading}
             />
           </div>
 
