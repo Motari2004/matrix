@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "./providers"; // ✅ Import the wrapper
+import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ILLUSIONMATRIX",
- 
+  title: "MATRIX",
+  icons: {
+    icon: "/matrix-icon.ico", // ✅ Your custom favicon path
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Providers> {/* ✅ Wrap children in client providers */}
+        <Providers>
           {children}
         </Providers>
       </body>
