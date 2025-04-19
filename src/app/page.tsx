@@ -36,7 +36,7 @@ export default function IntroPage() {
       {isLoading && (
         <div className="loading-overlay">
           <div className="spinner"></div>
-          <p className="text-white mt-4">Loading the truth...</p>
+          <p className="text-white mt-4">Decrypting reality...</p>
         </div>
       )}
 
