@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import './styles.css';
 
@@ -10,8 +10,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const router = useRouter();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // On page load, check if remembered user exists
   useEffect(() => {
     const remembered = localStorage.getItem('rememberedUser');
     if (remembered) {
@@ -19,6 +19,13 @@ export default function LoginPage() {
       setUsername(parsed.username);
       setPassword(parsed.password);
       setRememberMe(true);
+    }
+
+    // Play the audio when the page loads
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) =>
+        console.warn('Autoplay might be blocked:', err)
+      );
     }
   }, []);
 
@@ -43,17 +50,20 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (data && data.user) {
-        // If "Remember Me" is checked, store the credentials
         if (rememberMe) {
           localStorage.setItem('rememberedUser', JSON.stringify({ username, password }));
         } else {
           localStorage.removeItem('rememberedUser');
         }
 
-        // Store session info
         localStorage.setItem('userSession', JSON.stringify(data.user));
 
-        // Redirect to home page
+        // Stop the audio when login is successful
+        if (audioRef.current) {
+          audioRef.current.pause();
+          audioRef.current.currentTime = 0;
+        }
+
         router.push('/home');
       } else {
         alert('Login failed: Invalid response format');
@@ -66,7 +76,11 @@ export default function LoginPage() {
 
   return (
     <main className="login-container">
+      {/* Matrix background */}
       <div className="matrix-code"></div>
+
+      {/* Background music */}
+      <audio ref={audioRef} src="/sounds/login.mp3" loop />
 
       <div className="form-container">
         <h1 className="text-white text-4xl font-bold text-center mb-6">Login</h1>
