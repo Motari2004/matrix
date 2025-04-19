@@ -28,15 +28,15 @@ const Explore: React.FC = () => {
         <h1 className="section-title">Inside the Simulation</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
         <div className="journal-post">
-          <h3>🧬 April 18, 2025</h3>
+          <h3> April 19, 2025</h3>
           <p>
-            Nothing is permanent.
+            The Only Way 
             <br />
-            The system trains you to fear change. But in the code, only flow survives. Permanence is a trap. Evolve or loop.
+            Yes the truth is unstettling,let it go through,so my brothers and sisters,question everything,lets teach others too.
           </p>
         </div>
         <div className="journal-post">
-          <h3>📓 April 16, 2025</h3>
+          <h3> April 19, 2025</h3>
           <p>
             Testing if my thoughts affect digital outcomes. If I will it, can it happen? Starting with small script triggers.
           </p>
