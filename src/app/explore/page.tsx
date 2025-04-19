@@ -41,6 +41,12 @@ const Explore: React.FC = () => {
             Currently the website is under development,you may experience mobile phone layout shift but don&apos;t worry everything gonna be fine,you can refresh the pages.
           </p>
         </div>
+        <div className="journal-post">
+          <h3> April 19, 2025</h3>
+          <p>
+            Tell the children the truth,Babylon system is the vampire.
+          </p>
+        </div>
       </section>
 
       {/* Stylish Image Grid */}
