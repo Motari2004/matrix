@@ -36,7 +36,7 @@ const Explore: React.FC = () => {
         <div className="journal-post">
           <h3> April 19, 2025</h3>
           <p>
-            Currently the website is under development,you may experience mobile phone layout shift but don&apos;t worry everything gonna be fine,you can refresh the pages.
+            Currently the website is under development,you may experience mobile phone layout shift but don&apos;t worry everything gonna be fine.
           </p>
         </div>
         <div className="journal-post">
