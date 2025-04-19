@@ -85,7 +85,7 @@ export default function LoginPage() {
       {isLoading && (
         <div className="loading-overlay">
           <div className="spinner"></div>
-          <p className="text-white mt-4">Authenticating...</p>
+          <p className="text-white mt-4">Loading consciousness...</p>
         </div>
       )}
 
