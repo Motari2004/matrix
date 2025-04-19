@@ -14,9 +14,9 @@ export default function SignupPage() {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false); // 👈 new state for loading
   const router = useRouter();
 
-  // Page animation logic
   useEffect(() => {
     setIsClient(true);
 
@@ -29,7 +29,6 @@ export default function SignupPage() {
     }
   }, [isClient]);
 
-  // Matrix background audio
   useEffect(() => {
     const audio = new Audio('sounds/matrix.mp3');
     audio.loop = true;
@@ -45,7 +44,6 @@ export default function SignupPage() {
     };
   }, []);
 
-  // Background shock & wave animation
   const cycleEffect = () => {
     setShock(true);
     setTimeout(() => {
@@ -58,13 +56,14 @@ export default function SignupPage() {
     }, 2000);
   };
 
-  // Signup submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     setSuccess('');
+    setLoading(true); // 👈 start loading
 
     if (password !== confirmPassword) {
+      setLoading(false);
       setError('Passwords do not match');
       return;
     }
@@ -84,12 +83,14 @@ export default function SignupPage() {
         setSuccess('Account created successfully!');
         setTimeout(() => {
           router.push('/login');
-        }, 1500);
+        }, 2000); // delay before redirect
       } else {
         setError(data.error || 'Signup failed.');
       }
     } catch {
       setError('Server error. Please try again.');
+    } finally {
+      setLoading(false); // 👈 stop loading
     }
   };
 
@@ -104,6 +105,7 @@ export default function SignupPage() {
 
         {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
         {success && <p className="text-green-500 mb-4 text-center">{success}</p>}
+        {loading && <p className="text-yellow-300 text-center mb-4">Creating your account...</p>}
 
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="input-group">
@@ -115,6 +117,7 @@ export default function SignupPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              disabled={loading}
             />
           </div>
 
@@ -127,6 +130,7 @@ export default function SignupPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              disabled={loading}
             />
           </div>
 
@@ -139,11 +143,12 @@ export default function SignupPage() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
+              disabled={loading}
             />
           </div>
 
-          <button type="submit" className="submit-button mt-4">
-            Create Account
+          <button type="submit" className="submit-button mt-4" disabled={loading}>
+            {loading ? 'Processing...' : 'Create Account'}
           </button>
         </form>
 
