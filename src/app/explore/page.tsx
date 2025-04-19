@@ -30,7 +30,7 @@ const Explore: React.FC = () => {
         <div className="journal-post">
           <h3> April 19, 2025</h3>
           <p>
-            Do what it takes,find yourself,the real you.
+          You’ve felt it your entire life. That there’s something wrong with the world. You don’t know what it is, but it’s there — like a splinter in your mind.
           </p>
         </div>
         <div className="journal-post">
