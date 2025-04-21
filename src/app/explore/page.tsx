@@ -28,9 +28,9 @@ const Explore: React.FC = () => {
         <h1 className="section-title">Updates</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
         <div className="journal-post">
-          <h3> April 19, 2025</h3>
+          <h3> April 20, 2025</h3>
           <p>
-          You’ve felt it your entire life. That there’s something wrong with the world. You don’t know what it is, but it’s there — like a splinter in your mind.
+          We have to change the world,it is our time now.
           </p>
         </div>
         <div className="journal-post">
