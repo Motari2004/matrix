@@ -33,12 +33,7 @@ const Explore: React.FC = () => {
           We have to change the world,it is our time now.
           </p>
         </div>
-        <div className="journal-post">
-          <h3> April 19, 2025</h3>
-          <p>
-            Currently the website is under development,you may experience mobile phone layout shift but don&apos;t worry everything gonna be fine.
-          </p>
-        </div>
+     
         <div className="journal-post">
           <h3> April 19, 2025</h3>
           <p>
