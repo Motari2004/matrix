@@ -28,16 +28,16 @@ const Explore: React.FC = () => {
         <h1 className="section-title">Updates</h1>
         <p className="rotating-quote">&ldquo;{rotatingQuotes[quoteIndex]}&rdquo;</p>
         <div className="journal-post">
-          <h3> April 20, 2025</h3>
+          <h3> April 22, 2025</h3>
           <p>
-          We have to change the world,it is our time now.
+          The Matrix doesn’t fear the rich African. It fears the aware African.
           </p>
         </div>
      
         <div className="journal-post">
-          <h3> April 19, 2025</h3>
+          <h3> April 22, 2025</h3>
           <p>
-            Tell the children the truth,Babylon system is the vampire.
+          You won’t change Africa by fixing the system. You change it by outgrowing it.
           </p>
         </div>
       </section>
